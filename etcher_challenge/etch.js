@@ -6,6 +6,7 @@
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
+  $('.controls').on('click', createAndPlaceRows(8));
   
   // Bind your event listeners here:
 });
@@ -45,7 +46,8 @@ function createAndPlaceRows(n) {
   $('.grid').html(rows);
   const cells = $('.cell');
   cells.css({ height: cells.width() });
-  $('.cell').on('hover', function(event){
-    console.log('this is firing');
+  $('.cell').hover(function(event){
+    $(this).addClass('active');
   });
 }
+

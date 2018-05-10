@@ -1,17 +1,22 @@
 'use strict';
 
 function listenerFunction(){
-  $('.thumbnail').on('click', 'img', function(event){
-    
-    let image = $(this).clone();
-    
-    console.log(image)
- //   $(this)
-    $('.hero img').replaceWith(image);
 
+  // function handleEvent(event) {
+  //   let image = $(this).clone();
+  //   $('.hero img').replaceWith(image);
+  // }
+
+  $('.thumbnail').on('click', 'img', function(event){
+    let image = $(this).clone();
+    $('.hero img').replaceWith(image);
+  });
+
+  $('.thumbnail').on('keypress', 'img', function(event){
+    let image = $(this).clone();
+    $('.hero img').replaceWith(image);
   });
 
 }
-
 
 $(listenerFunction);

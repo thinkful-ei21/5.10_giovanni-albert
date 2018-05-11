@@ -6,12 +6,12 @@
 // When DOM is ready:
 $(() => {
   createAndPlaceRows(8);
-  $('.controls').on('click', createAndPlaceRows(8));
+  $('.controls button').click( event => createAndPlaceRows(8));
+ // console.log($('.controls button'));
   
   // Bind your event listeners here:
 });
-  
-  
+
   
   
   
